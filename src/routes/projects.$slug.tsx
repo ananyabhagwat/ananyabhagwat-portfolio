@@ -7,7 +7,7 @@ export const Route = createFileRoute("/projects/$slug")({
   loader: ({ params }) => {
     const index = projects.findIndex((p) => p.slug === params.slug);
     if (index < 0) throw notFound();
-    return { project: projects[index], next: projects[(index + 1) % projects.length] };
+    return { project: projects[index]!, next: projects[(index + 1) % projects.length]! };
   },
   head: ({ loaderData }) => {
     if (!loaderData) return { meta: [{ title: "Project not found" }, { name: "robots", content: "noindex" }] };
