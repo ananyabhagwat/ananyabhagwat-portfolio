@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { EMAIL, LINKEDIN, SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { ArrowUpRight, Asterisk } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -22,8 +23,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const EMAIL = "mailto:ananya.bhagwat3720@gmail.com";
-const LINKEDIN = "https://www.linkedin.com/in/ananyabhagwat";
 const BASE = "https://ananyabhagwat.github.io";
 
 const projects = [
@@ -32,7 +31,7 @@ const projects = [
     title: "Chippity",
     desc: "A browser extension that makes the hidden costs of ChatGPT use visible and actionable, without getting in the way of why students use it.",
     img: `${BASE}/images/chippity-card-image.png`,
-    href: `${BASE}/chippity.html`,
+    slug: "chippity",
     bg: "card-lime",
   },
   {
@@ -40,37 +39,37 @@ const projects = [
     title: "Pollygraph",
     desc: "An interactive polling plug-in that lets students cast votes by pointing at a shared display, replacing hand-raising with spatial, anonymous participation.",
     img: `${BASE}/images/pollygraph-card-image.png`,
-    href: `${BASE}/pollygraph.html`,
+    slug: "pollygraph",
     bg: "card-lilac",
   },
   {
     tag: "Independent Project",
     title: "Baggage Reclaim",
-    desc: "Redesigning the information environment at baggage reclaim to reduce uncertainty and frustration, without changing how baggage handling works.",
+    desc: "Redesigning the information environment at baggage reclaim to reduce uncertainty and frustration, without changing how baggage handling actually works.",
     img: `${BASE}/images/baggage-card-image.png`,
-    href: `${BASE}/baggage.html`,
+    slug: "baggage",
     bg: "card-sky",
   },
   {
     tag: "HCI for Health & Wellbeing · Individual",
     title: "GQM Evaluation of Clue",
-    desc: "A systematic audit of whether Clue meets the goals its users bring to it, grounded in CHI 2024 research on menstrual health data exploration.",
+    desc: "A systematic audit of whether Clue meets the goals its users actually bring to it, grounded in CHI 2024 research on menstrual health data exploration.",
     img: `${BASE}/images/GQM-card-image.png`,
-    href: `${BASE}/clue.html`,
+    slug: "clue",
     bg: "card-rose",
   },
   {
     tag: "HCI for Health & Wellbeing · Individual",
     title: "Menstrual Tracker Prototype",
-    desc: "Testing whether uncertainty-aware predictions and cross-cycle reflection help users make sense of their menstrual health data.",
+    desc: "A prototype testing whether uncertainty-aware predictions and cross-cycle reflection actually help users make sense of their menstrual health data.",
     img: `${BASE}/images/prototype-card-image.png`,
-    href: `${BASE}/prototype.html`,
+    slug: "prototype",
     bg: "card-sand",
   },
 ];
 
 const tags = [
-  "Attention & Focus",
+  "Attention and Focus",
   "Workplace Communication",
   "Self-interruption",
   "Controlled Experiment",
@@ -107,39 +106,22 @@ function Index() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
       <div className="mx-auto max-w-6xl px-6">
-        <header className="flex items-center justify-between py-5">
-          <a href="#" className="flex items-center gap-3 font-medium">
-            <span className="grid h-10 w-10 place-items-center rounded-lg bg-primary text-primary-foreground">
-              AB
-            </span>
-            Ananya Bhagwat
-          </a>
-          <nav className="flex items-center gap-6 text-sm">
-            <a href="#work" className="hidden hover:opacity-70 sm:block">Work</a>
-            <a href="#research" className="hidden hover:opacity-70 sm:block">Research</a>
-            <a
-              href={EMAIL}
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-primary-foreground transition hover:opacity-90"
-            >
-              <Asterisk className="h-4 w-4" /> Get in touch
-            </a>
-          </nav>
-        </header>
+        <SiteHeader />
 
         {/* Hero */}
         <section className="relative pb-24 pt-20 md:pt-32">
           <div className="absolute right-0 top-10 hidden md:block">
             <Badge />
           </div>
-          <p className="mb-6 text-sm text-muted-foreground">Human-Computer Interaction — UCL</p>
+          <p className="mb-6 text-sm text-muted-foreground">Human-Computer Interaction - UCL</p>
           <h1 className="max-w-4xl text-5xl font-normal leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
-            Design work
+            Design work grounded
             <br />
-            grounded in research
+            in research.
           </h1>
           <p className="mt-12 max-w-xl text-lg leading-relaxed md:text-xl">
-            Hi, I'm Ananya — five projects across HCI, health technology, interaction design, and
-            sustainable systems. Each one started with people and ended with something testable.
+            Five projects across HCI, health technology, interaction design, and sustainable systems.
+            Each one started with people and ended with something testable.
           </p>
           <div className="mt-8 flex gap-6 text-sm">
             <a href={EMAIL} className="underline underline-offset-4 hover:opacity-70">Email</a>
@@ -152,9 +134,10 @@ function Index() {
           <SectionTitle n="01">Work / Case Study</SectionTitle>
           <div className="flex flex-col gap-10">
             {projects.map((p) => (
-              <a
+              <Link
                 key={p.title}
-                href={p.href}
+                to="/projects/$slug"
+                params={{ slug: p.slug }}
                 className={`group grid overflow-hidden rounded-3xl ${p.bg} md:grid-cols-5`}
               >
                 <div className="flex flex-col justify-between gap-6 p-8 md:col-span-2 md:p-10">
@@ -175,7 +158,7 @@ function Index() {
                     className="h-full max-h-96 w-full rounded-2xl object-cover shadow-xl transition duration-500 group-hover:scale-[1.02]"
                   />
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </section>
@@ -190,20 +173,13 @@ function Index() {
             </div>
             <div className="space-y-4 leading-relaxed text-muted-foreground md:col-span-2">
               <p>
-                Modern knowledge work asks people to stay constantly available while doing cognitively
-                demanding tasks. Slack, Teams, email and calendar notifications fragment attention not just
-                when they arrive, but before they do — creating a persistent expectation that something
-                might come in at any moment. This project investigates whether that anticipatory state is
-                itself a source of distraction.
+                Modern knowledge work asks people to stay constantly available while doing cognitively demanding tasks. Slack, Teams, email, and calendar notifications fragment attention not just when they arrive, but before they do - by creating a persistent expectation that something might come in at any moment. This project investigates whether that anticipatory state, produced by unpredictable communication timing, is itself a source of distraction.
               </p>
               <p>
-                A controlled browser-based experiment has participants write or edit while receiving
-                simulated workplace messages on a predictable or unpredictable schedule, measuring switching
-                frequency, completion time, error rates and self-reported workload.
+                The study uses a controlled browser-based experiment in which participants complete a writing or editing task while receiving simulated workplace chat messages on either a predictable or unpredictable schedule. The core question is whether unpredictability increases self-interruption behaviour, even when the total number of messages is held constant. Measures include switching frequency, task completion time, error rates, and self-reported workload.
               </p>
               <p>
-                It shifts focus from interruptions as isolated events to anticipation as an ongoing
-                attentional state produced by communication systems themselves.
+                The project builds on HCI research into multitasking and interruption management, and contributes by shifting focus from interruptions as isolated events to anticipation as an ongoing attentional state produced by communication systems themselves.
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {tags.map((t) => (
@@ -234,10 +210,7 @@ function Index() {
           </div>
         </section>
 
-        <footer className="flex justify-between border-t py-8 text-sm text-muted-foreground">
-          <span>© 2026 Ananya Bhagwat</span>
-          <a href={LINKEDIN} className="hover:text-foreground">LinkedIn ↗</a>
-        </footer>
+        <SiteFooter />
       </div>
     </div>
   );
