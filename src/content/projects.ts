@@ -634,7 +634,11 @@ export const projects: Project[] = [
       "type": "img",
       "alt": "Calendar view - prediction windows",
       "src": "https://ananyabhagwat.github.io/images-proto/pt-calendar.jpg",
-      "caption": "The second was embedding contextual events (travel, stress, sleep) across all views, so users can see whether a change in symptoms coincides with something that happened in their life without having to cross-reference manually."
+      "caption": "Calendar view - prediction windows"
+     },
+     {
+      "type": "p",
+      "text": "The second was embedding contextual events (travel, stress, sleep) across all views, so users can see whether a change in symptoms coincides with something that happened in their life without having to cross-reference manually."
      },
      {
       "type": "p",
@@ -648,22 +652,26 @@ export const projects: Project[] = [
      {
       "type": "img",
       "alt": "Symptoms view - multivariate comparison",
-      "src": "https://ananyabhagwat.github.io/images-proto/pt-symptoms.jpg"
+      "src": "https://ananyabhagwat.github.io/images-proto/pt-symptoms.jpg",
+      "caption": "Symptoms view - multivariate comparison"
      },
      {
       "type": "img",
       "alt": "Analysis view - deviation alert",
-      "src": "https://ananyabhagwat.github.io/images-proto/pt-analysis.jpg"
+      "src": "https://ananyabhagwat.github.io/images-proto/pt-analysis.jpg",
+      "caption": "Analysis view - deviation alert"
      },
      {
       "type": "img",
       "alt": "Information view - contextual articles",
-      "src": "https://ananyabhagwat.github.io/images-proto/pt-information.jpg"
+      "src": "https://ananyabhagwat.github.io/images-proto/pt-information.jpg",
+      "caption": "Information view - contextual articles"
      },
      {
       "type": "img",
       "alt": "Cross-cycle comparison toggle",
-      "src": "https://ananyabhagwat.github.io/images-proto/pt-compare.jpg"
+      "src": "https://ananyabhagwat.github.io/images-proto/pt-compare.jpg",
+      "caption": "Cross-cycle comparison toggle"
      }
     ]
    },
@@ -678,7 +686,11 @@ export const projects: Project[] = [
       "type": "img",
       "alt": "Task completion and results table",
       "src": "https://ananyabhagwat.github.io/images-proto/pt-results.jpg",
-      "caption": "Four of five tasks had majority completion. Helpfulness ratings ranged between 6 and 7 across tasks."
+      "caption": "Task completion and results table"
+     },
+     {
+      "type": "p",
+      "text": "Four of five tasks had majority completion. Helpfulness ratings ranged between 6 and 7 across tasks."
      }
     ]
    },
