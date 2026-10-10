@@ -1,3 +1,4 @@
+const BASE = import.meta.env.BASE_URL;
 export type Block =
   | { type: "p"; text: string }
   | { type: "h4"; text: string }
@@ -14,7 +15,7 @@ export const projects: Project[] = [
   "tag": "Interaction Design / Group Project",
   "title": "Chippity: Reflective LLM Use in Higher Education",
   "subtitle": "A browser extension and companion mobile app that makes the hidden costs of ChatGPT use visible at the moment of interaction - without restricting how students use it.",
-  "cover": "https://ananyabhagwat.github.io/images/chippity-card-image.png",
+  "cover": `${BASE}images/chippity-card-image.png`,
   "bg": "card-lime",
   "meta": [
    {
@@ -49,7 +50,7 @@ export const projects: Project[] = [
      {
       "type": "img",
       "alt": "Chippity design process flowchart",
-      "src": "https://ananyabhagwat.github.io/images-chippity/Design%20process.png",
+      "src": `${BASE}images-chippity/Design%20process.png`,
       "caption": "The design process: from exploratory interviews through two rounds of prototyping and evaluation to a final hi-fi system."
      }
     ]
@@ -64,7 +65,7 @@ export const projects: Project[] = [
      {
       "type": "img",
       "alt": "Affinity mapping with sticky notes on a whiteboard",
-      "src": "https://ananyabhagwat.github.io/images-chippity/affinity%20mapping.jpg",
+      "src": `${BASE}images-chippity/affinity%20mapping.jpg`,
       "caption": "Affinity mapping - codes clustered and refined into four themes that directly shaped the design requirements."
      }
     ]
@@ -115,7 +116,7 @@ export const projects: Project[] = [
      {
       "type": "img",
       "alt": "Handwritten personas for Sophie and Brian",
-      "src": "https://ananyabhagwat.github.io/images-chippity/persona.jpg",
+      "src": `${BASE}images-chippity/persona.jpg`,
       "caption": "Two personas synthesising distinct motivational profiles - one concerned primarily with cognitive overreliance, one with environmental impact. These anchored every subsequent design decision."
      }
     ]
@@ -143,7 +144,7 @@ export const projects: Project[] = [
      {
       "type": "img",
       "alt": "Lo-fi wireframes for browser extension and mobile app",
-      "src": "https://ananyabhagwat.github.io/images-chippity/low%20fidelity%20prototypes.png",
+      "src": `${BASE}images-chippity/low%20fidelity%20prototypes.png`,
       "caption": "Lo-fi prototype screens: browser extension wireframes (top row) and companion mobile app in three states - sign-in, time limit reached, and approaching limit (bottom row)."
      },
      {
@@ -194,7 +195,7 @@ export const projects: Project[] = [
      {
       "type": "img",
       "alt": "Table of participant ratings for 15 pop-up prompts across 5 participants",
-      "src": "https://ananyabhagwat.github.io/images-chippity/prompts%20ratings%20data.png"
+      "src": `${BASE}images-chippity/prompts%20ratings%20data.png`
      },
      {
       "type": "h4",
@@ -222,25 +223,25 @@ export const projects: Project[] = [
      {
       "type": "img",
       "alt": "Four hi-fi screens showing Chrome Web Store listing, sign-up, profile selection, and settings",
-      "src": "https://ananyabhagwat.github.io/images-chippity/hi-fi%201.png",
+      "src": `${BASE}images-chippity/hi-fi%201.png`,
       "caption": "Set-up flow: Chrome Web Store listing, sign-up, profile selection, and detailed profile settings with advanced options."
      },
      {
       "type": "img",
       "alt": "Chippity nudge appearing in bottom-right of ChatGPT interface",
-      "src": "https://ananyabhagwat.github.io/images-chippity/hifi%201.png",
+      "src": `${BASE}images-chippity/hifi%201.png`,
       "caption": "A nudge appearing bottom-right while a student is mid-conversation on ChatGPT - positioned to be visible without interrupting the main task area."
      },
      {
       "type": "img",
       "alt": "Usage stats, community creation, community dashboard and profile settings screens",
-      "src": "https://ananyabhagwat.github.io/images-chippity/hifi%203.png",
+      "src": `${BASE}images-chippity/hifi%203.png`,
       "caption": "The full system: personal usage and environmental impact stats, community creation and joining flow, community dashboard, and refined profile settings."
      },
      {
       "type": "img",
       "alt": "Community dashboard for Team UCL",
-      "src": "https://ananyabhagwat.github.io/images-chippity/dashboard.png",
+      "src": `${BASE}images-chippity/dashboard.png`,
       "caption": "Community dashboard showing cohort usage, goal attainment rates, and prompt optimisation. Members see collective progress - motivating without ranking individuals."
      },
      {
@@ -250,7 +251,7 @@ export const projects: Project[] = [
      {
       "type": "img",
       "alt": "Six final nudge examples from the hi-fi prototype",
-      "src": "https://ananyabhagwat.github.io/images-chippity/hifi%20prompts%204.png",
+      "src": `${BASE}images-chippity/hifi%20prompts%204.png`,
       "caption": "Each nudge is phrased as an invitation, not an instruction. Tone and wording were directly informed by the rating data from evaluation 1."
      },
      {
@@ -260,7 +261,7 @@ export const projects: Project[] = [
      {
       "type": "img",
       "alt": "Profile settings hover description on personalised AI recommendations toggle",
-      "src": "https://ananyabhagwat.github.io/images-chippity/personalized%20ai%20rec.png",
+      "src": `${BASE}images-chippity/personalized%20ai%20rec.png`,
       "caption": "Hover description on the Personalised AI Recommendations toggle - one of several contextual explanations added after evaluation 1 flagged that settings lacked clarity."
      }
     ]
@@ -306,7 +307,7 @@ export const projects: Project[] = [
   "tag": "Independent Project",
   "title": "Pollygraph: An Interactive Polling Plug-in",
   "subtitle": "A proposed system that lets participants cast votes by pointing at regions of a shared display, replacing hand-raising with spatial, anonymous, and continuous participation.",
-  "cover": "https://ananyabhagwat.github.io/images/pollygraph-card-image.png",
+  "cover": `${BASE}images/pollygraph-card-image.png`,
   "bg": "card-lilac",
   "meta": [
    {
@@ -417,7 +418,7 @@ export const projects: Project[] = [
   "tag": "Independent Project",
   "title": "Revisiting the Baggage Reclaim System",
   "subtitle": "Redesigning the information environment at baggage reclaim to reduce uncertainty and frustration during the waiting stage, without changing how baggage handling actually works.",
-  "cover": "https://ananyabhagwat.github.io/images/baggage-card-image.png",
+  "cover": `${BASE}images/baggage-card-image.png`,
   "bg": "card-sky",
   "meta": [
    {
@@ -515,7 +516,7 @@ export const projects: Project[] = [
   "tag": "HCI for Health and Wellbeing / Individual",
   "title": "A GQM Evaluation of Clue",
   "subtitle": "A systematic audit of whether Clue meets the goals its users actually bring to it, grounded in Lin et al.'s CHI 2024 research on functional design requirements for menstrual health data exploration.",
-  "cover": "https://ananyabhagwat.github.io/images/GQM-card-image.png",
+  "cover": `${BASE}images/GQM-card-image.png`,
   "bg": "card-rose",
   "meta": [
    {
@@ -597,7 +598,7 @@ export const projects: Project[] = [
   "tag": "HCI for Health and Wellbeing / Individual",
   "title": "Menstrual Tracker Prototype",
   "subtitle": "A functional prototype built to test whether uncertainty-aware predictions, multivariate exploration, and cross-cycle reflection actually help users make sense of their menstrual health data.",
-  "cover": "https://ananyabhagwat.github.io/images/prototype-card-image.png",
+  "cover": `${BASE}images/prototype-card-image.png`,
   "bg": "card-sand",
   "meta": [
    {
@@ -633,7 +634,7 @@ export const projects: Project[] = [
      {
       "type": "img",
       "alt": "Calendar view - prediction windows",
-      "src": "https://ananyabhagwat.github.io/images-proto/pt-calendar.jpg",
+      "src": `${BASE}images-proto/pt-calendar.png`,
       "caption": "Calendar view - prediction windows"
      },
      {
@@ -652,25 +653,25 @@ export const projects: Project[] = [
      {
       "type": "img",
       "alt": "Symptoms view - multivariate comparison",
-      "src": "https://ananyabhagwat.github.io/images-proto/pt-symptoms.jpg",
+      "src": `${BASE}images-proto/pt-symptoms.png`,
       "caption": "Symptoms view - multivariate comparison"
      },
      {
       "type": "img",
       "alt": "Analysis view - deviation alert",
-      "src": "https://ananyabhagwat.github.io/images-proto/pt-analysis.jpg",
+      "src": `${BASE}images-proto/pt-analysis.png`,
       "caption": "Analysis view - deviation alert"
      },
      {
       "type": "img",
       "alt": "Information view - contextual articles",
-      "src": "https://ananyabhagwat.github.io/images-proto/pt-information.jpg",
+      "src": `${BASE}images-proto/pt-information.png`,
       "caption": "Information view - contextual articles"
      },
      {
       "type": "img",
       "alt": "Cross-cycle comparison toggle",
-      "src": "https://ananyabhagwat.github.io/images-proto/pt-compare.jpg",
+      "src": `${BASE}images-proto/pt-compare.png`,
       "caption": "Cross-cycle comparison toggle"
      }
     ]
@@ -685,7 +686,7 @@ export const projects: Project[] = [
      {
       "type": "img",
       "alt": "Task completion and results table",
-      "src": "https://ananyabhagwat.github.io/images-proto/pt-results.jpg",
+      "src": `${BASE}images-proto/pt-results.png`,
       "caption": "Task completion and results table"
      },
      {
