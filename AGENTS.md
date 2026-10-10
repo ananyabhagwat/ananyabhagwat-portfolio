@@ -8,3 +8,4 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+- Project case-study text lives in src/content/projects.ts and renders through one shared page at /projects/$slug, so all project pages stay consistent in design.
