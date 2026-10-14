@@ -5,7 +5,7 @@ import { ArrowUpRight, Asterisk } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ananya Bhagwat — HCI Designer grounded in research" },
+      { title: "Ananya Bhagwat - HCI Portfolio" },
       {
         name: "description",
         content:
